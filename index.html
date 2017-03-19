@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Berlin U Stops</title>
+  <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no'>
+
+  <script src='https://api.mapbox.com/mapbox-gl-js/v0.33.1/mapbox-gl.js'></script>
+  <link href='https://api.mapbox.com/mapbox-gl-js/v0.33.1/mapbox-gl.css' rel='stylesheet'>
+
+  <style type="text/css">
+    body {
+      margin: 0;
+      padding: 0;
+    }
+    #map {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 45em;
+      right: 0;
+    }
+    #query {
+      width: 20em;
+      padding: 0.5em;
+      margin: 2em 0em 0em 2em;
+      font-family: monospace;
+      font-size: x-large;
+    }
+    #results {
+      width: 20em;
+      list-style-type: none;
+      font-family: monospace;
+      font-size: x-large;
+    }
+    #result {
+      margin: 0em 0em 0.5em 0em;
+    }
+    #match {
+      font-weight: bold;
+    }
+  </style>
+
+</head>
+<body>
+
+  <form id="form" name="form" action="">
+    <input id="query" name="query" type="text" value="" placeholder="My Station…" autofocus="on" autocomplete="off">
+    <ol id="results"></ol>
+  </form>
+
+  <div id="map"></div>
+
+  <script src="app.js"></script>
+
+</body>
+</html>
